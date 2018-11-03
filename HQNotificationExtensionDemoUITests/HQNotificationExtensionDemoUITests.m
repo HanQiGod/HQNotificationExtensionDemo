@@ -2,8 +2,8 @@
 //  HQNotificationExtensionDemoUITests.m
 //  HQNotificationExtensionDemoUITests
 //
-//  Created by 君凯商联网 on 2018/11/3.
-//  Copyright © 2018 君凯商联网. All rights reserved.
+//  Created by Mr_Han on 2018/11/3.
+//  Copyright © 2018 Mr_Han. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

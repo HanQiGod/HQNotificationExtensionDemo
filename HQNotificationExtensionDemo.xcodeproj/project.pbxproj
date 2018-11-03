@@ -15,6 +15,8 @@
 		7ADCEA2E218DA0D60059BC52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADCEA2D218DA0D60059BC52 /* main.m */; };
 		7ADCEA38218DA0D70059BC52 /* HQNotificationExtensionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADCEA37218DA0D70059BC52 /* HQNotificationExtensionDemoTests.m */; };
 		7ADCEA43218DA0D70059BC52 /* HQNotificationExtensionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADCEA42218DA0D70059BC52 /* HQNotificationExtensionDemoUITests.m */; };
+		7ADCEA59218DA1AC0059BC52 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADCEA58218DA1AC0059BC52 /* NotificationService.m */; };
+		7ADCEA5D218DA1AC0059BC52 /* HQNotificationEx.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7ADCEA55218DA1AC0059BC52 /* HQNotificationEx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = 7ADCEA1A218DA0D40059BC52;
 			remoteInfo = HQNotificationExtensionDemo;
 		};
+		7ADCEA5B218DA1AC0059BC52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ADCEA13218DA0D30059BC52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ADCEA54218DA1AC0059BC52;
+			remoteInfo = HQNotificationEx;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7ADCEA61218DA1AC0059BC52 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7ADCEA5D218DA1AC0059BC52 /* HQNotificationEx.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7ADCEA1B218DA0D40059BC52 /* HQNotificationExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQNotificationExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +74,10 @@
 		7ADCEA3E218DA0D70059BC52 /* HQNotificationExtensionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HQNotificationExtensionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADCEA42218DA0D70059BC52 /* HQNotificationExtensionDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQNotificationExtensionDemoUITests.m; sourceTree = "<group>"; };
 		7ADCEA44218DA0D70059BC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ADCEA55218DA1AC0059BC52 /* HQNotificationEx.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HQNotificationEx.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ADCEA57218DA1AC0059BC52 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		7ADCEA58218DA1AC0059BC52 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		7ADCEA5A218DA1AC0059BC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7ADCEA52218DA1AC0059BC52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +118,7 @@
 				7ADCEA1D218DA0D40059BC52 /* HQNotificationExtensionDemo */,
 				7ADCEA36218DA0D70059BC52 /* HQNotificationExtensionDemoTests */,
 				7ADCEA41218DA0D70059BC52 /* HQNotificationExtensionDemoUITests */,
+				7ADCEA56218DA1AC0059BC52 /* HQNotificationEx */,
 				7ADCEA1C218DA0D40059BC52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +129,7 @@
 				7ADCEA1B218DA0D40059BC52 /* HQNotificationExtensionDemo.app */,
 				7ADCEA33218DA0D70059BC52 /* HQNotificationExtensionDemoTests.xctest */,
 				7ADCEA3E218DA0D70059BC52 /* HQNotificationExtensionDemoUITests.xctest */,
+				7ADCEA55218DA1AC0059BC52 /* HQNotificationEx.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +168,16 @@
 			path = HQNotificationExtensionDemoUITests;
 			sourceTree = "<group>";
 		};
+		7ADCEA56218DA1AC0059BC52 /* HQNotificationEx */ = {
+			isa = PBXGroup;
+			children = (
+				7ADCEA57218DA1AC0059BC52 /* NotificationService.h */,
+				7ADCEA58218DA1AC0059BC52 /* NotificationService.m */,
+				7ADCEA5A218DA1AC0059BC52 /* Info.plist */,
+			);
+			path = HQNotificationEx;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,10 +188,12 @@
 				7ADCEA17218DA0D40059BC52 /* Sources */,
 				7ADCEA18218DA0D40059BC52 /* Frameworks */,
 				7ADCEA19218DA0D40059BC52 /* Resources */,
+				7ADCEA61218DA1AC0059BC52 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7ADCEA5C218DA1AC0059BC52 /* PBXTargetDependency */,
 			);
 			name = HQNotificationExtensionDemo;
 			productName = HQNotificationExtensionDemo;
@@ -188,6 +236,23 @@
 			productReference = 7ADCEA3E218DA0D70059BC52 /* HQNotificationExtensionDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7ADCEA54218DA1AC0059BC52 /* HQNotificationEx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ADCEA5E218DA1AC0059BC52 /* Build configuration list for PBXNativeTarget "HQNotificationEx" */;
+			buildPhases = (
+				7ADCEA51218DA1AC0059BC52 /* Sources */,
+				7ADCEA52218DA1AC0059BC52 /* Frameworks */,
+				7ADCEA53218DA1AC0059BC52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HQNotificationEx;
+			productName = HQNotificationEx;
+			productReference = 7ADCEA55218DA1AC0059BC52 /* HQNotificationEx.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +273,9 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 7ADCEA1A218DA0D40059BC52;
 					};
+					7ADCEA54218DA1AC0059BC52 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = 7ADCEA16218DA0D30059BC52 /* Build configuration list for PBXProject "HQNotificationExtensionDemo" */;
@@ -226,6 +294,7 @@
 				7ADCEA1A218DA0D40059BC52 /* HQNotificationExtensionDemo */,
 				7ADCEA32218DA0D70059BC52 /* HQNotificationExtensionDemoTests */,
 				7ADCEA3D218DA0D70059BC52 /* HQNotificationExtensionDemoUITests */,
+				7ADCEA54218DA1AC0059BC52 /* HQNotificationEx */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +318,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7ADCEA3C218DA0D70059BC52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ADCEA53218DA1AC0059BC52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,6 +360,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7ADCEA51218DA1AC0059BC52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ADCEA59218DA1AC0059BC52 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +380,11 @@
 			isa = PBXTargetDependency;
 			target = 7ADCEA1A218DA0D40059BC52 /* HQNotificationExtensionDemo */;
 			targetProxy = 7ADCEA3F218DA0D70059BC52 /* PBXContainerItemProxy */;
+		};
+		7ADCEA5C218DA1AC0059BC52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ADCEA54218DA1AC0059BC52 /* HQNotificationEx */;
+			targetProxy = 7ADCEA5B218DA1AC0059BC52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,6 +622,40 @@
 			};
 			name = Release;
 		};
+		7ADCEA5F218DA1AC0059BC52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HQNotificationEx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JunKai.HQNotificationExtensionDemo.HQNotificationEx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7ADCEA60218DA1AC0059BC52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HQNotificationEx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JunKai.HQNotificationExtensionDemo.HQNotificationEx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,6 +691,15 @@
 			buildConfigurations = (
 				7ADCEA4E218DA0D70059BC52 /* Debug */,
 				7ADCEA4F218DA0D70059BC52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ADCEA5E218DA1AC0059BC52 /* Build configuration list for PBXNativeTarget "HQNotificationEx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ADCEA5F218DA1AC0059BC52 /* Debug */,
+				7ADCEA60218DA1AC0059BC52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
